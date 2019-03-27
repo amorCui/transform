@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>transform</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		body,
+		div,
+		img {
+			border-style: none;
+			margin: 0px !important;
+			padding: 0px !important;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.col-img {
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+
+		.col-img .img-text {
+			z-index: 10;
+			position: absolute;
+			-webkit-transition: 1s ease all;
+			-moz-transition: 1s ease all;
+			transition: 1s ease all;
+		}
+
+		.row .col-img h5 {
+			left: -80px;
+			top: 20px;
+			font-weight: bolder;
+			font-size: large;
+			color: rgba(171, 77, 180, 1.00);
+		}
+
+		.row .col-img .context {
+			left: 20px;
+			top: 50px;
+			font-size: small;
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+
+		.col-img:hover h5 {
+			-webkit-transform: translate(100px);
+			-moz-transform: translate(100px);
+			transform: translate(100px);
+			-webkit-transition: 1s ease all;
+			-moz-transition: 1s ease all;
+			transition: 1s ease all;
+		}
+
+		.col-img:hover .context {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: 1s ease all;
+			-moz-transition: 1s ease all;
+			transition: 1s ease all;
+		}
+
+		.col-img img {
+			-webkit-transition: 1s ease all;
+			-moz-transition: 1s ease all;
+			transition: 1s ease all;
+		}
+
+		.col-img:hover img {
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			transform: scale(1.2);
+			-webkit-transition: 1s ease all;
+			-moz-transition: 1s ease all;
+			transition: 1s ease all;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-img col-xs-4">
+			<h5 class="img-text">-再见</h5>
+			<div class="img-text context">悬浮时这段文本进行了旋转</div>
+			<img src="images/img1.jpg" alt="" />
+		</div>
+		<div class="col-img col-xs-4">
+			<h5 class="img-text">你好</h5>
+			<div class="img-text context">hello world</div>
+			<img src="images/img2.jpg" alt="" />
+		</div>
+		<div class="col-img col-xs-4">
+			<img src="images/img3.jpg" alt="" /></div>
+	</div>
+	<div class="row">
+		<div class="col-img col-xs-4">
+			<h5 class="img-text">第二次你好</h5>
+			<div class="img-text context">hello hello kity！！</div>
+			<img src="images/img4.jpg" alt="" />
+		</div>
+		<div class="col-img col-xs-4"><img src="images/img5.jpg" alt="" /></div>
+		<div class="col-img col-xs-4"><img src="images/img1.jpg" alt="" /></div>
+	</div>
+	<div class="row">
+		<div class="col-img col-xs-4"><img src="images/img2.jpg" alt="" /></div>
+		<div class="col-img col-xs-4"><img src="images/img3.jpg" alt="" /></div>
+		<div class="col-img col-xs-4"><img src="images/img4.jpg" alt="" /></div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
